@@ -40,6 +40,7 @@ Response :
     "description": "Task Description",
     "status": "pending",
     "due_date": "2025-02-10"
+          }
 }
 ```
 
@@ -48,11 +49,61 @@ Response :
 Request :
 
 ```sh
+GET /tasks?status=pending&page=1&limit=10&search=meeting
+```
+
+Response :
+
+```sh
 {
-  "title": "Task Title",
-  "description": "Task Description",
-  "status": "pending",
-  "due_date": "2025-02-10"
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Task Title",
+      "description": "Task Description",
+      "status": "pending",
+      "due_date": "2025-02-10"
+    }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "total_pages": 1,
+    "total_tasks": 1
+  }
+}
+```
+
+Request :
+
+```sh
+GET /tasks/:id
+```
+
+Response :
+
+```sh
+{
+  "message": "Task retrieved successfully",
+  "task": {
+    "id": 1,
+    "title": "Task Title",
+    "description": "Task Description",
+    "status": "pending",
+    "due_date": "2025-02-10"
+  }
+}
+```
+
+## PUT /tasks/:id
+
+Request :
+
+```sh
+{
+  "title": "Updated Task Title",
+  "description": "Updated Task Description",
+  "status": "completed",
+  "due_date": "2025-02-15"
 }
 ```
 
@@ -60,13 +111,30 @@ Response :
 
 ```sh
 {
-  "message": "Task created successfully",
+  "message": "Task updated successfully",
   "task": {
     "id": 1,
-    "title": "Task Title",
-    "description": "Task Description",
-    "status": "pending",
-    "due_date": "2025-02-10"
+    "title": "Updated Task Title",
+    "description": "Updated Task Description",
+    "status": "completed",
+    "due_date": "2025-02-15"
+  }
+}
+```
+
+## DELETE /tasks/:id
+
+Request :
+
+```sh
+DELETE /tasks/1
+```
+
+Response :
+
+```sh
+{
+  "message": "Task deleted successfully"
 }
 ```
 
@@ -80,18 +148,18 @@ Response :
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Muhammad Yusuf Danan Risdianto – [@myusufdananr](https://instagram.com/myusufdananr) – myusufdananr@gmail.com
 
 Distributed under the XYZ license. See `LICENSE` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+[https://github.com/Kuncups/todo_db.git](https://github.com/Kuncups/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
+1. Fork it (<https://github.com/Kuncups/todo_db.git/fork>)
+2. Create your feature branch (`git checkout -b feature/todo_api`)
+3. Commit your changes (`git commit -am 'first commit'`)
+4. Push to the branch (`git push origin feature/todo_api`)
 5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
@@ -102,3 +170,7 @@ Distributed under the XYZ license. See `LICENSE` for more information.
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki
+
+```
+
+```
