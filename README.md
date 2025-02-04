@@ -138,13 +138,6 @@ Response :
 }
 ```
 
-## Release History
-
-- 0.1.0
-  - The first proper release
-- 0.0.1
-  - Work in progress
-
 ## Meta
 
 Muhammad Yusuf Danan Risdianto – [@myusufdananr](https://instagram.com/myusufdananr) – myusufdananr@gmail.com
@@ -152,11 +145,3 @@ Muhammad Yusuf Danan Risdianto – [@myusufdananr](https://instagram.com/myusufd
 Distributed under the XYZ license. See `LICENSE` for more information.
 
 [https://github.com/Kuncups/todo_db.git](https://github.com/Kuncups/)
-
-## Contributing
-
-1. Fork it (<https://github.com/Kuncups/todo_db.git/fork>)
-2. Create your feature branch (`git checkout -b feature/todo_api`)
-3. Commit your changes (`git commit -am 'first commit'`)
-4. Push to the branch (`git push origin feature/todo_api`)
-5. Create a new Pull Request
