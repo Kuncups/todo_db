@@ -3,6 +3,7 @@ package main
 import (
 	"todo-api/config"
 	"todo-api/routes"
+
 	"github.com/gin-gonic/gin"
 )
 

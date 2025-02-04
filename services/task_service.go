@@ -6,7 +6,6 @@ import (
 	"todo-api/models"
 )
 
-// GetTasks fetches tasks with pagination and filter
 func GetTasks(status string, search string, page int, limit int) ([]models.Task, int64, int, error) {
 	var tasks []models.Task
 	var totalTasks int64
